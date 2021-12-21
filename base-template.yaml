@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  ascension-sam-api
+
+  SAM Template for Ascension REST API
+
+Globals:
+  Function:
+    Timeout: 3
+  Api:
+    Cors:
+      AllowMethods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+      AllowHeaders: "'Content-Type,ascension-user,ascension-user-api-key'"
+      AllowOrigin: "'*'"
+Resources:
+Outputs:
+  AscensionRestApi:
+    Description: "API Gateway endpoint URL for Prod stage of Ascension REST API"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/summary/"

@@ -1,0 +1,30 @@
+{
+  "name": "ascension-rest-api",
+  "version": "1.0.0",
+  "description": "This project contains the REST API for Ascension built upon AWS SAM.",
+  "scripts": {
+    "build": "node generate-sam-template.js && sam build --use-container",
+    "test": "cd api-code && npm test",
+    "test:integration": "cd api-code && npm run test:integration",
+    "lint": "cd api-code && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connected-web/ascension-rest-api.git"
+  },
+  "keywords": [
+    "AWS",
+    "SAM",
+    "Ascension",
+    "API"
+  ],
+  "author": "Connected Web",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/connected-web/ascension-rest-api/issues"
+  },
+  "homepage": "https://github.com/connected-web/ascension-rest-api#readme",
+  "dependencies": {
+    "yaml-cfn": "^0.3.1"
+  }
+}
